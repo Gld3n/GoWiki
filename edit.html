@@ -1,6 +1,12 @@
-<h1>Editing {{.Title}}</h1>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Editing {{.Title}}</h1>
 
-<form action="/save/{{.Title}}" method="POST">
-<div><textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
-<div><input type="submit" value="Save"></div>
-</form>
+    <form action="/save/{{.Title}}" method="POST">
+      <div><textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
+      <div><input type="submit" value="Save"></div>
+    </form>
+  </body>
